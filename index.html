@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CupSafe Slack Desk</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="workspace">CupSafe Desk</div>
+        <div class="channel active"># wallet-support</div>
+        <div class="channel"># security-triage</div>
+        <div class="channel"># payments-ops</div>
+        <div class="channel"># defi-alerts</div>
+      </aside>
+      <section class="desk">
+        <header class="topbar">
+          <div>
+            <h1>Slack Wallet Risk Desk</h1>
+            <p>Local simulation for the Slack Agent Builder submission package.</p>
+          </div>
+          <div class="status-pill">offline demo</div>
+        </header>
+
+        <section class="composer" aria-label="Incident selector">
+          <label for="incidentSelect">Incident</label>
+          <select id="incidentSelect"></select>
+          <button id="runButton" type="button">Run triage</button>
+        </section>
+
+        <section class="thread" id="thread" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <script type="module">
+      import { triageSlackIncident } from "./src/slack-agent-sim.js";
+
+      const select = document.querySelector("#incidentSelect");
+      const button = document.querySelector("#runButton");
+      const thread = document.querySelector("#thread");
+      let incidents = [];
+
+      async function boot() {
+        const response = await fetch("./data/slack-incidents.json");
+        incidents = await response.json();
+        for (const incident of incidents) {
+          const option = document.createElement("option");
+          option.value = incident.id;
+          option.textContent = `${incident.channel} - ${incident.id}`;
+          select.appendChild(option);
+        }
+        render(incidents[0]);
+      }
+
+      function render(incident) {
+        const result = triageSlackIncident(incident);
+        thread.innerHTML = `
+          <article class="message incoming">
+            <div class="avatar">${incident.reporter.slice(0, 1)}</div>
+            <div class="bubble">
+              <div class="meta">${incident.reporter} in ${incident.channel}</div>
+              <p>${incident.message}</p>
+              <p class="need">${incident.customerNeed}</p>
+            </div>
+          </article>
+          <article class="message agent ${result.decision.toLowerCase()}">
+            <div class="avatar bot">C</div>
+            <div class="bubble">
+              <div class="decision-row">
+                <strong>${result.decision}</strong>
+                <span>${result.severity}</span>
+              </div>
+              <pre>${result.slackReply}</pre>
+              <div class="evidence">
+                ${result.retrieved.map((item) => `
+                  <div class="evidence-row">
+                    <span>${item.similarity}</span>
+                    <p>${item.title}: ${item.evidence}</p>
+                  </div>
+                `).join("")}
+              </div>
+              <p class="escalation">${result.escalation}</p>
+            </div>
+          </article>
+        `;
+      }
+
+      button.addEventListener("click", () => {
+        const incident = incidents.find((item) => item.id === select.value);
+        render(incident);
+      });
+
+      boot();
+    </script>
+  </body>
+</html>

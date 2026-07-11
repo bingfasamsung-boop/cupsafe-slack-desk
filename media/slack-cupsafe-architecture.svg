@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CupSafe Slack Desk Architecture</title>
+  <desc id="desc">Slack incident reports flow through parser, risk memory, policy scorer, reply generator, and escalation queue.</desc>
+  <rect width="1200" height="720" fill="#f7f5f7"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1d1c1d">CupSafe Slack Desk Architecture</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="18" fill="#616061">Wallet-risk support triage inside Slack, before the user signs.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="170" width="230" height="130" rx="8" fill="#3f0e40"/>
+    <text x="88" y="218" font-size="22" font-weight="700" fill="#fff">Slack Surface</text>
+    <text x="88" y="252" font-size="16" fill="#eee5ee">/cupsafe-check</text>
+    <text x="88" y="276" font-size="16" fill="#eee5ee">message shortcut</text>
+
+    <rect x="370" y="160" width="250" height="150" rx="8" fill="#fff" stroke="#d9d6dc"/>
+    <text x="400" y="204" font-size="22" font-weight="700" fill="#1d1c1d">Incident Parser</text>
+    <text x="400" y="238" font-size="16" fill="#616061">operation</text>
+    <text x="400" y="262" font-size="16" fill="#616061">amount / recipient trust</text>
+    <text x="400" y="286" font-size="16" fill="#616061">support question</text>
+
+    <rect x="700" y="160" width="250" height="150" rx="8" fill="#fff" stroke="#d9d6dc"/>
+    <text x="730" y="204" font-size="22" font-weight="700" fill="#1d1c1d">Risk Memory</text>
+    <text x="730" y="238" font-size="16" fill="#616061">prior scam patterns</text>
+    <text x="730" y="262" font-size="16" fill="#616061">verified merchants</text>
+    <text x="730" y="286" font-size="16" fill="#616061">bridge / swap cases</text>
+
+    <rect x="370" y="400" width="250" height="150" rx="8" fill="#fff" stroke="#d9d6dc"/>
+    <text x="400" y="444" font-size="22" font-weight="700" fill="#1d1c1d">Policy Scorer</text>
+    <text x="400" y="478" font-size="16" fill="#616061">ALLOW / REVIEW / DENY</text>
+    <text x="400" y="502" font-size="16" fill="#616061">severity</text>
+    <text x="400" y="526" font-size="16" fill="#616061">evidence ranking</text>
+
+    <rect x="700" y="400" width="250" height="150" rx="8" fill="#fff" stroke="#d9d6dc"/>
+    <text x="730" y="444" font-size="22" font-weight="700" fill="#1d1c1d">Slack Reply</text>
+    <text x="730" y="478" font-size="16" fill="#616061">support-safe response</text>
+    <text x="730" y="502" font-size="16" fill="#616061">security escalation</text>
+    <text x="730" y="526" font-size="16" fill="#616061">review queue</text>
+
+    <rect x="1010" y="270" width="140" height="170" rx="8" fill="#1264a3"/>
+    <text x="1030" y="322" font-size="20" font-weight="700" fill="#fff">Judges</text>
+    <text x="1030" y="356" font-size="15" fill="#e8f3ff">sandbox</text>
+    <text x="1030" y="380" font-size="15" fill="#e8f3ff">demo video</text>
+    <text x="1030" y="404" font-size="15" fill="#e8f3ff">repo</text>
+  </g>
+
+  <g stroke="#616061" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M290 235 H370"/>
+    <path d="M620 235 H700"/>
+    <path d="M495 310 V400"/>
+    <path d="M620 475 H700"/>
+    <path d="M950 475 C990 475 990 355 1010 355"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#616061"/>
+    </marker>
+  </defs>
+</svg>

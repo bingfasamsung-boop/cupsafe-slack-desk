@@ -1,0 +1,41 @@
+{
+  "display_information": {
+    "name": "CupSafe Desk",
+    "description": "Wallet-risk support triage before a user signs.",
+    "background_color": "#3f0e40"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "CupSafe Desk",
+      "always_online": false
+    },
+    "slash_commands": [
+      {
+        "command": "/cupsafe-check",
+        "description": "Triage a wallet-risk incident.",
+        "usage_hint": "approve 50 USDT for unknown contract",
+        "should_escape": false,
+        "url": "https://example.com/slack/commands/cupsafe-check"
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands",
+        "chat:write",
+        "channels:read",
+        "groups:read"
+      ]
+    }
+  },
+  "settings": {
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://example.com/slack/actions"
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}

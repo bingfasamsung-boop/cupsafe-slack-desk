@@ -1,0 +1,54 @@
+[
+  {
+    "id": "support-unknown-approval",
+    "channel": "#wallet-support",
+    "reporter": "Mina",
+    "message": "A user wants to approve 50 USDT for a contract linked from a Telegram DM. They say it is for a tournament reward claim.",
+    "operation": "approve",
+    "amount": 50,
+    "dailyCap": 25,
+    "recipientTrust": "unknown",
+    "slippageBps": 0,
+    "customerNeed": "Can support tell the user whether to sign?",
+    "expectedDecision": "DENY"
+  },
+  {
+    "id": "ops-verified-merchant",
+    "channel": "#payments-ops",
+    "reporter": "Kai",
+    "message": "Verified fan shop checkout for 8 USDT. Recipient is in the known merchant list and the user has no other spending today.",
+    "operation": "transfer",
+    "amount": 8,
+    "dailyCap": 25,
+    "recipientTrust": "verified",
+    "slippageBps": 0,
+    "customerNeed": "Can this be allowed without escalation?",
+    "expectedDecision": "ALLOW"
+  },
+  {
+    "id": "security-bridge-review",
+    "channel": "#security-triage",
+    "reporter": "Nora",
+    "message": "User is bridging 12 USDT to a new chain before a live match. Route is known, but finality and recipient chain are not confirmed.",
+    "operation": "bridge",
+    "amount": 12,
+    "dailyCap": 25,
+    "recipientTrust": "known",
+    "slippageBps": 80,
+    "customerNeed": "Should the security desk ask for more checks?",
+    "expectedDecision": "REVIEW"
+  },
+  {
+    "id": "dex-high-slippage",
+    "channel": "#defi-alerts",
+    "reporter": "Lian",
+    "message": "Swap request for 9 USDT with 6.5% slippage on a thin route. User says the app defaulted to this route.",
+    "operation": "swap",
+    "amount": 9,
+    "dailyCap": 25,
+    "recipientTrust": "known",
+    "slippageBps": 650,
+    "customerNeed": "What should the support reply say?",
+    "expectedDecision": "REVIEW"
+  }
+]
