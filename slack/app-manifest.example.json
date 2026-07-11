@@ -1,6 +1,6 @@
 {
   "display_information": {
-    "name": "CupSafe Desk",
+    "name": "CupSafe Slack Desk",
     "description": "Wallet-risk support triage before a user signs.",
     "background_color": "#3f0e40"
   },
@@ -15,7 +15,7 @@
         "description": "Triage a wallet-risk incident.",
         "usage_hint": "approve 50 USDT for unknown contract",
         "should_escape": false,
-        "url": "https://example.com/slack/commands/cupsafe-check"
+        "url": "https://bingfasamsung-boop.github.io/cupsafe-slack-desk/"
       }
     ]
   },
@@ -32,7 +32,7 @@
   "settings": {
     "interactivity": {
       "is_enabled": true,
-      "request_url": "https://example.com/slack/actions"
+      "request_url": "https://bingfasamsung-boop.github.io/cupsafe-slack-desk/"
     },
     "org_deploy_enabled": false,
     "socket_mode_enabled": false,
