@@ -18,7 +18,7 @@ The demo reads Slack-style incident reports, extracts wallet-risk features, retr
 
 ## How we built it
 
-The prototype is an offline Slack-style app built with HTML, CSS, and JavaScript. The agent simulator uses deterministic fixtures for approval, merchant payment, bridge, and high-slippage swap incidents. We also prepared a Slack app manifest path for `/cupsafe-check`, message actions, and judge sandbox access.
+The prototype is a public Slack-style app built with HTML, CSS, and JavaScript. The agent simulator uses deterministic fixtures for approval, merchant payment, bridge, and high-slippage swap incidents. A Slack developer sandbox and installed app shell were also created for the `/cupsafe-check` workflow, while the public demo keeps the behavior judge-safe without real wallet data or customer data.
 
 ## Challenges
 
@@ -34,9 +34,9 @@ The main challenge was making the agent useful without connecting to private wal
 
 ## What is next
 
-- Create a real Slack app in a developer sandbox.
-- Connect `/cupsafe-check` to a hosted endpoint.
-- Give judges access to the sandbox.
+- Connect `/cupsafe-check` to a hosted HTTPS POST endpoint.
+- Add signed request verification and Slack Block Kit responses.
+- Give judges access to the sandbox after the endpoint is live.
 - Store confirmed scam and false-positive incidents as durable team memory.
 
 ## Built With
@@ -47,5 +47,6 @@ JavaScript, HTML, CSS, Slack app manifest draft, CupSafe risk-memory fixtures.
 
 - Demo URL: https://bingfasamsung-boop.github.io/cupsafe-slack-desk/
 - Source Code: https://github.com/bingfasamsung-boop/cupsafe-slack-desk
-- Video Demo: local MP4 ready at `media/cupsafe-slack-desk-demo.mp4`; YouTube upload pending
+- Video Demo: https://bingfasamsung-boop.github.io/cupsafe-slack-desk/media/cupsafe-slack-desk-demo.mp4
 - Slack Developer Sandbox URL: https://cupsafeslackdesk.slack.com/
+- Slack App ID: A0BGQ5542RF
