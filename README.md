@@ -34,6 +34,18 @@ Open:
 http://127.0.0.1:8096/
 ```
 
+Hosted demo:
+
+```text
+https://bingfasamsung-boop.github.io/cupsafe-slack-desk/
+```
+
+Source repository:
+
+```text
+https://github.com/bingfasamsung-boop/cupsafe-slack-desk
+```
+
 Verify decisions:
 
 ```powershell

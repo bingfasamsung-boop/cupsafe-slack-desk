@@ -45,7 +45,7 @@ JavaScript, HTML, CSS, Slack app manifest draft, CupSafe risk-memory fixtures.
 
 ## Links
 
-- Demo URL: TBD
-- Source Code: TBD
+- Demo URL: https://bingfasamsung-boop.github.io/cupsafe-slack-desk/
+- Source Code: https://github.com/bingfasamsung-boop/cupsafe-slack-desk
 - Video Demo: TBD
 - Slack Developer Sandbox URL: requires user-authorized setup
