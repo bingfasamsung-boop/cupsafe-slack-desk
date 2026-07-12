@@ -50,4 +50,4 @@ JavaScript, HTML, CSS, Slack app manifest draft, CupSafe risk-memory fixtures.
 - Video Demo: https://youtu.be/Slwe0d19_j4
 - Slack Developer Sandbox URL: https://cupsafeslackdesk.slack.com/
 - Slack App ID: A0BGQ5542RF
-- Slack Slash Command Endpoint: https://recognised-sbjct-cigarette-chapters.trycloudflare.com/slack/commands
+- Slack Slash Command Endpoint: https://oven-bridge-lawrence-fitted.trycloudflare.com/slack/commands
