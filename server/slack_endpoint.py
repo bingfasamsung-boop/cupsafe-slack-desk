@@ -213,8 +213,9 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     port = int(os.environ.get("PORT", "8787"))
-    server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
-    print(f"CupSafe Slack endpoint listening on http://127.0.0.1:{port}")
+    host = os.environ.get("HOST", "127.0.0.1")
+    server = ThreadingHTTPServer((host, port), Handler)
+    print(f"CupSafe Slack endpoint listening on http://{host}:{port}")
     server.serve_forever()
 
 
