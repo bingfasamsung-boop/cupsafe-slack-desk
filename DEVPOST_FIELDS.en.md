@@ -50,3 +50,4 @@ JavaScript, HTML, CSS, Slack app manifest draft, CupSafe risk-memory fixtures.
 - Video Demo: https://bingfasamsung-boop.github.io/cupsafe-slack-desk/media/cupsafe-slack-desk-demo.mp4
 - Slack Developer Sandbox URL: https://cupsafeslackdesk.slack.com/
 - Slack App ID: A0BGQ5542RF
+- Slack Slash Command Endpoint: https://e2368d0f811bff63-218-85-208-206.serveousercontent.com/slack/commands

@@ -4,3 +4,8 @@ node_modules/
 .env
 .env.*
 *.log
+*.pid
+__pycache__/
+server/*_known_hosts
+server/localhost_run_tunnel_key
+server/localhost_run_tunnel_key.pub

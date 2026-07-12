@@ -15,7 +15,7 @@
         "description": "Triage a wallet-risk incident.",
         "usage_hint": "approve 50 USDT for unknown contract",
         "should_escape": false,
-        "url": "https://bingfasamsung-boop.github.io/cupsafe-slack-desk/"
+        "url": "https://e2368d0f811bff63-218-85-208-206.serveousercontent.com/slack/commands"
       }
     ]
   },
@@ -32,7 +32,7 @@
   "settings": {
     "interactivity": {
       "is_enabled": true,
-      "request_url": "https://bingfasamsung-boop.github.io/cupsafe-slack-desk/"
+      "request_url": "https://e2368d0f811bff63-218-85-208-206.serveousercontent.com/slack/commands"
     },
     "org_deploy_enabled": false,
     "socket_mode_enabled": false,

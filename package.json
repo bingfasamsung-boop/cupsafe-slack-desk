@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "endpoint": "python server/slack_endpoint.py",
     "verify": "node scripts/verify-slack-demo.mjs"
   }
 }
